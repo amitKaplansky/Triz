@@ -2569,14 +2569,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27edd0d0b838ed645975497ba7a5f1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ItemName: 
-  m_DisplaySpriteName: 
+  m_ItemName: panel_key
+  m_DisplaySpriteName: panel_key
   m_ItemProperty: 0
   m_ExtraDisplaySpriteName: 
   m_ResultOfCombinationItemName: 
   m_AmountOfUsage: 1
-  m_HighlightedCursor: {fileID: 0}
-  m_NormalCursor: {fileID: 0}
 --- !u!61 &472900883
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3392,8 +3390,6 @@ MonoBehaviour:
   m_ExtraDisplaySpriteName: 
   m_ResultOfCombinationItemName: 
   m_AmountOfUsage: 1
-  m_HighlightedCursor: {fileID: 0}
-  m_NormalCursor: {fileID: 0}
 --- !u!61 &542305082
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4270,14 +4266,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27edd0d0b838ed645975497ba7a5f1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ItemName: 
-  m_DisplaySpriteName: 
+  m_ItemName: Picture_Calendar_Date_Of_London
+  m_DisplaySpriteName: Picture_Calendar_Date_Of_London
   m_ItemProperty: 1
   m_ExtraDisplaySpriteName: 
   m_ResultOfCombinationItemName: 
   m_AmountOfUsage: 1
-  m_HighlightedCursor: {fileID: 0}
-  m_NormalCursor: {fileID: 0}
 --- !u!212 &858037497
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10128,14 +10122,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27edd0d0b838ed645975497ba7a5f1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ItemName: 
-  m_DisplaySpriteName: 
-  m_ItemProperty: 1
+  m_ItemName: London_Fly_Ticket
+  m_DisplaySpriteName: London_Fly_Ticket
+  m_ItemProperty: 0
   m_ExtraDisplaySpriteName: 
   m_ResultOfCombinationItemName: 
   m_AmountOfUsage: 1
-  m_HighlightedCursor: {fileID: 0}
-  m_NormalCursor: {fileID: 0}
 --- !u!61 &1668184056
 BoxCollider2D:
   m_ObjectHideFlags: 0
