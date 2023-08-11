@@ -2575,8 +2575,6 @@ MonoBehaviour:
   m_ExtraDisplaySpriteName: 
   m_ResultOfCombinationItemName: 
   m_AmountOfUsage: 1
-  m_HighlightedCursor: {fileID: 0}
-  m_NormalCursor: {fileID: 0}
 --- !u!61 &472900883
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3392,8 +3390,6 @@ MonoBehaviour:
   m_ExtraDisplaySpriteName: 
   m_ResultOfCombinationItemName: 
   m_AmountOfUsage: 1
-  m_HighlightedCursor: {fileID: 0}
-  m_NormalCursor: {fileID: 0}
 --- !u!61 &542305082
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4276,8 +4272,6 @@ MonoBehaviour:
   m_ExtraDisplaySpriteName: 
   m_ResultOfCombinationItemName: 
   m_AmountOfUsage: 1
-  m_HighlightedCursor: {fileID: 0}
-  m_NormalCursor: {fileID: 0}
 --- !u!212 &858037497
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10134,8 +10128,6 @@ MonoBehaviour:
   m_ExtraDisplaySpriteName: 
   m_ResultOfCombinationItemName: 
   m_AmountOfUsage: 1
-  m_HighlightedCursor: {fileID: 0}
-  m_NormalCursor: {fileID: 0}
 --- !u!61 &1668184056
 BoxCollider2D:
   m_ObjectHideFlags: 0
