@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &7471386 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 107612377165272987, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
-  m_PrefabInstance: {fileID: 913995006}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9238763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,6 +2464,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.153781, y: 20.984882}
   m_EdgeRadius: 0
+--- !u!114 &266099488 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7240796010056364204, guid: c32642203de17a441b31b853b4d249ee, type: 3}
+  m_PrefabInstance: {fileID: 1509942264}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &266404951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6818,7 +6824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0209e6066b49e47852e3a529fd4ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ZoomInWindow: {fileID: 0}
+  m_ZoomInWindow: {fileID: 819972259}
 --- !u!1 &732900278
 GameObject:
   m_ObjectHideFlags: 0
@@ -7503,6 +7509,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &819972259 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4755350748257259395, guid: c32642203de17a441b31b853b4d249ee, type: 3}
+  m_PrefabInstance: {fileID: 1509942264}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &824354226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8616,11 +8627,15 @@ PrefabInstance:
     - target: {fileID: 1529483588353472611, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
       propertyPath: m_ZoomInWindow
       value: 
-      objectReference: {fileID: 7471386}
+      objectReference: {fileID: 819972259}
+    - target: {fileID: 1529483588353472611, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
+      propertyPath: m_SlotItemImage
+      value: 
+      objectReference: {fileID: 913995010}
     - target: {fileID: 1529483588353472611, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
       propertyPath: m_ZoomInWindowText
       value: 
-      objectReference: {fileID: 962617456}
+      objectReference: {fileID: 266099488}
     - target: {fileID: 5296508922377602138, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8744,45 +8759,77 @@ PrefabInstance:
     - target: {fileID: 6757505103236744853, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
       propertyPath: m_ZoomInWindow
       value: 
-      objectReference: {fileID: 7471386}
+      objectReference: {fileID: 819972259}
     - target: {fileID: 6757505103236744853, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
       propertyPath: m_ZoomInWindowText
       value: 
-      objectReference: {fileID: 962617456}
+      objectReference: {fileID: 266099488}
     - target: {fileID: 6757505103284311557, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
       propertyPath: m_ZoomInWindow
       value: 
-      objectReference: {fileID: 7471386}
+      objectReference: {fileID: 819972259}
+    - target: {fileID: 6757505103284311557, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
+      propertyPath: m_SlotItemImage
+      value: 
+      objectReference: {fileID: 913995007}
     - target: {fileID: 6757505103284311557, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
       propertyPath: m_ZoomInWindowText
       value: 
-      objectReference: {fileID: 962617456}
+      objectReference: {fileID: 266099488}
     - target: {fileID: 6757505103442631063, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
       propertyPath: m_ZoomInWindow
       value: 
-      objectReference: {fileID: 7471386}
+      objectReference: {fileID: 819972259}
+    - target: {fileID: 6757505103442631063, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
+      propertyPath: m_SlotItemImage
+      value: 
+      objectReference: {fileID: 913995008}
     - target: {fileID: 6757505103442631063, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
       propertyPath: m_ZoomInWindowText
       value: 
-      objectReference: {fileID: 962617456}
+      objectReference: {fileID: 266099488}
     - target: {fileID: 6757505104306512112, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
       propertyPath: m_ZoomInWindow
       value: 
-      objectReference: {fileID: 7471386}
+      objectReference: {fileID: 819972259}
+    - target: {fileID: 6757505104306512112, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
+      propertyPath: m_SlotItemImage
+      value: 
+      objectReference: {fileID: 913995009}
     - target: {fileID: 6757505104306512112, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
       propertyPath: m_ZoomInWindowText
       value: 
-      objectReference: {fileID: 962617456}
+      objectReference: {fileID: 266099488}
     - target: {fileID: 6757505104353222249, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
       propertyPath: m_ZoomInWindow
       value: 
-      objectReference: {fileID: 7471386}
+      objectReference: {fileID: 819972259}
     - target: {fileID: 6757505104353222249, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
       propertyPath: m_ZoomInWindowText
       value: 
-      objectReference: {fileID: 962617456}
+      objectReference: {fileID: 266099488}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
+--- !u!1 &913995007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5296508922768100513, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
+  m_PrefabInstance: {fileID: 913995006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &913995008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5296508922595066675, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
+  m_PrefabInstance: {fileID: 913995006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &913995009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5296508923458959956, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
+  m_PrefabInstance: {fileID: 913995006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &913995010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5296508922380803121, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
+  m_PrefabInstance: {fileID: 913995006}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &915836707
 GameObject:
   m_ObjectHideFlags: 0
@@ -9160,17 +9207,6 @@ MonoBehaviour:
   m_QuizStartMenu: {fileID: 102774923}
   m_QuizGame: {fileID: 939575479}
   m_QuizEndOfGame: {fileID: 994901093}
---- !u!114 &962617456 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 107612378718342592, guid: 1405a1707066b994284873d48a50b7b1, type: 3}
-  m_PrefabInstance: {fileID: 913995006}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &974793365
 GameObject:
   m_ObjectHideFlags: 0
@@ -13519,7 +13555,7 @@ MonoBehaviour:
   m_ItemProperty: 0
   m_ExtraDisplaySpriteName: 
   m_ResultOfCombinationItemName: 
-  m_AmountOfUsage: 4
+  m_AmountOfUsage: 1
 --- !u!61 &1375784393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15011,6 +15047,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4755350748434661548, guid: c32642203de17a441b31b853b4d249ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 708974301}
+    - target: {fileID: 4755350748434661548, guid: c32642203de17a441b31b853b4d249ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickCloseZoomInventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755350748434661548, guid: c32642203de17a441b31b853b4d249ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainCanvasManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4755350750124117646, guid: c32642203de17a441b31b853b4d249ee, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 4.0999756
@@ -15018,6 +15066,10 @@ PrefabInstance:
     - target: {fileID: 4755350750124117646, guid: c32642203de17a441b31b853b4d249ee, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -10.9210205
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068544911914572091, guid: c32642203de17a441b31b853b4d249ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c32642203de17a441b31b853b4d249ee, type: 3}
@@ -18755,7 +18807,7 @@ MonoBehaviour:
   m_ItemProperty: 0
   m_ExtraDisplaySpriteName: 
   m_ResultOfCombinationItemName: 
-  m_AmountOfUsage: 5
+  m_AmountOfUsage: 1
 --- !u!212 &1898617076
 SpriteRenderer:
   m_ObjectHideFlags: 0

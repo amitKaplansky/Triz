@@ -135,6 +135,7 @@ public class InventoryManager : MonoBehaviour
             SlotManager currentSlotManager = m_Slots[i].GetComponent<SlotManager>();
             if (i < usedSlotsData.Count)
             {
+
                 currentSlotManager.SetSlotData(usedSlotsData[i]);
             }
             else

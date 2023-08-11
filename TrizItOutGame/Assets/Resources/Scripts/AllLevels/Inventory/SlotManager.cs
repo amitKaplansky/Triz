@@ -114,6 +114,7 @@ public class SlotManager : MonoBehaviour, IPointerClickHandler
 
     public void SetSlotData(SlotTempData i_SlotData)
     {
+      //  Debug.Log("Item name = " + i_SlotData.ItemName);
         ItemNameForZoomInWindow = i_SlotData.ItemName;
         m_SlotItemImage.GetComponent<Image>().sprite = i_SlotData.SlotImageSprite;
         IsEmpty = false;
