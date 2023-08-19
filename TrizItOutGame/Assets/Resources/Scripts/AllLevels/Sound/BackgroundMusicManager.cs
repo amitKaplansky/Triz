@@ -62,7 +62,16 @@ public class BackgroundMusicManager : MonoBehaviour
                     }
                 case 4: // Level 3
                     {
-                        m_AudioSource.volume = 0;
+                        m_AudioSource.clip = SoundManager.FindAudioClip("level4BackgroundMusic");//?
+                        m_AudioSource.volume = 0.6f;
+                        m_AudioSource.Play();
+                        break;
+                    }
+                case 5://level 4
+                    {
+                        m_AudioSource.clip = SoundManager.FindAudioClip("level4BackgroundMusic");
+                        m_AudioSource.volume = 0.6f;
+                        m_AudioSource.Play();
                         break;
                     }
             }

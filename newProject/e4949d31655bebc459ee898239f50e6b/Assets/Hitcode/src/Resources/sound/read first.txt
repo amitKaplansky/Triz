@@ -1,4 +1,0 @@
-background music must start the name with "bg"
-for example bgmusic,bgmusic1,bgnicesong etc.....
-
-So vise versa, when use as sound effect,must not start with "bg"

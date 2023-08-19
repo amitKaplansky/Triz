@@ -70,7 +70,6 @@ public class MainCameraManagerLevel3 : MonoBehaviour
         if (m_CurrentWallIndex == 2 && m_CanGoRight == false)
         {
             rightBtnShouldApper = false;
-            Debug.Log("Im here?");
         }
         bool backBtnShouldAppear = m_CurrentWallIndex < 1;
 

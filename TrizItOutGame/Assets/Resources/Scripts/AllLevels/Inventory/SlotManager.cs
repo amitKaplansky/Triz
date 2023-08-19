@@ -63,6 +63,7 @@ public class SlotManager : MonoBehaviour, IPointerClickHandler
 
     public void AssignProperty(string i_ItemName, int i_OrdrNumber, string i_DisplayImage, string i_CombinationItem, int i_AmountOfUsage)
     {
+        Debug.Log("Asinged slot");
         ItemProperty = (eProperty)i_OrdrNumber;
         this.ItemNameForZoomInWindow = i_ItemName;
         this.DisplayImage = i_DisplayImage;
