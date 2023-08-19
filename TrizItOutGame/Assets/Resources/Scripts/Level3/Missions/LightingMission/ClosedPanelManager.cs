@@ -26,6 +26,8 @@ public class ClosedPanelManager : MonoBehaviour, IInteractable
 
     public void Interact(DisplayManagerLevel1 currDisplay)
     {
+        Debug.Log("I clcik");
+
         if (m_Inventory.GetComponent<InventoryManager>().CurrentSelectedSlot != null)
         {
             string name = m_Inventory.GetComponent<InventoryManager>().CurrentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite.name;
