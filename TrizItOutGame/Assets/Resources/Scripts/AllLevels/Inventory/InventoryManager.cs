@@ -22,7 +22,8 @@ public class InventoryManager : MonoBehaviour
 
     private void Start()
     {
-        m_SoundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
+         m_SoundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
+        Debug.Log("Start Inventory");
         m_EmptyItemSprite = Resources.Load<Sprite>(sr_EmptyItemSpritePath + sr_EmptyItemName);
         initializeInventory();
     }
@@ -36,8 +37,10 @@ public class InventoryManager : MonoBehaviour
     private void initializeInventory()
     {
         foreach(GameObject slot in m_Slots)
-        {
-            slot.transform.GetChild(0).GetComponent<Image>().sprite = m_EmptyItemSprite;
+        { 
+            Debug.Log("was here");
+
+        slot.transform.GetChild(0).GetComponent<Image>().sprite = m_EmptyItemSprite;
         }
     }
 
@@ -62,6 +65,7 @@ public class InventoryManager : MonoBehaviour
         m_SoundManager.PlaySound(SoundManager.k_TakeItemSoundName);
         if (i_Item.m_AmountOfUsage != 0)
         {
+            Debug.Log("Add item");
             GameObject firstEmptySlot = findFirstEmpetySlot();
 
             firstEmptySlot.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>(sr_InventoryItemSpritePath + i_Item.m_DisplaySpriteName);

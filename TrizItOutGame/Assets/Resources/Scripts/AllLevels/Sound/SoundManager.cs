@@ -12,7 +12,7 @@ public class SoundManager : MonoBehaviour
                             s_ElectricFallSound, s_PiggyBankBreakSound,
                             s_ScrewOpenSound, s_QuizCorrectAnswerSound, s_QuizWrongAnswerSound,
                             s_PiggyBankKnockSound, s_FanSound, s_ElectricitySound, s_WindowsStartupSound,
-                            s_HintSound, s_BroomSound;
+                            s_HintSound, s_BroomSound,s_BreakGlassSound, s_OpenDoorSound;
 
     public AudioSource m_AudioSource;
 
@@ -37,6 +37,10 @@ public class SoundManager : MonoBehaviour
     public const string k_WindowsStartupSoundName = "windowsStartupSound";
     public const string k_HintSoundName = "hintSound";
     public const string k_BroomSoundName = "broomSound";
+    public const string k_BreakGlassSound = "BreakingGlass";
+    public const string k_OpenDoorSound = "openDoor";
+
+
 
     public static readonly string sr_SoundPath = "Sounds/";
 
@@ -77,6 +81,10 @@ public class SoundManager : MonoBehaviour
         s_WindowsStartupSound = Resources.Load<AudioClip>(sr_SoundPath + k_WindowsStartupSoundName);
         s_HintSound = Resources.Load<AudioClip>(sr_SoundPath + k_HintSoundName);
         s_BroomSound = Resources.Load<AudioClip>(sr_SoundPath + k_BroomSoundName);
+        s_BreakGlassSound = Resources.Load<AudioClip>(sr_SoundPath + k_BreakGlassSound);
+        s_OpenDoorSound = Resources.Load<AudioClip>(sr_SoundPath + k_OpenDoorSound);
+
+
     }
 
     public void PlaySound(string i_Clip)
@@ -188,6 +196,16 @@ public class SoundManager : MonoBehaviour
                 case k_BroomSoundName:
                     {
                         m_AudioSource.PlayOneShot(s_BroomSound);
+                        break;
+                    }
+                case k_BreakGlassSound:
+                    {
+                        m_AudioSource.PlayOneShot(s_BreakGlassSound);
+                        break;
+                    }
+                case k_OpenDoorSound:
+                    {
+                        m_AudioSource.PlayOneShot(s_OpenDoorSound);
                         break;
                     }
             }
