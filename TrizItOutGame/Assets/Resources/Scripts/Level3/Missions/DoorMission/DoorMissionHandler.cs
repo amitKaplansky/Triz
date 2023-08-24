@@ -45,6 +45,8 @@ public class DoorMissionHandler : MonoBehaviour
                 m_SoundManager.PlaySound(SoundManager.k_CorrectPasswordSoundName);
                 GameObject.Find("Door").GetComponent<SpriteRenderer>().enabled = false;
                 m_OpenDoor.GetComponent<SpriteRenderer>().enabled = true;
+                NextLevelLoader nextLevelLoader = GameObject.Find("Next_Level_Loader").GetComponent<NextLevelLoader>();
+                nextLevelLoader.LoadNextLevel();
             }
             else
             {
