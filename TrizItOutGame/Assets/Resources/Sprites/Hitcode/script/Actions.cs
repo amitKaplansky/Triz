@@ -253,6 +253,27 @@ namespace Hitcode_RoomEscape
                                 GameData.Instance.cameraList.Add(tnewCam);
                             }
                         }
+                        
+                        if (targetCam.name != "Main Camera")
+                        {
+                            Debug.Log("Main Camera enalble ");
+
+                            GameObject stoneObject = GameObject.Find("stone");
+
+                            if (stoneObject != null)
+                            {
+                                stoneObject.GetComponent<PolygonCollider2D>().enabled = false;
+                            }
+                            GameObject.Find("breakMeBox").GetComponent<BoxCollider2D>().enabled = false;
+                            GameObject.Find("paswwordGame").GetComponent<BoxCollider>().enabled = false;
+                            GameObject.Find("Key").GetComponent<PolygonCollider2D>().enabled = false;
+                            GameObject.Find("Door").GetComponent<BoxCollider2D>().enabled = false;
+                            GameObject.Find("newspaper").GetComponent<PolygonCollider2D>().enabled = false;
+                            GameObject.Find("books").GetComponent<PolygonCollider2D>().enabled = false;
+                            GameObject.Find("zoomToPaint").GetComponent<BoxCollider2D>().enabled = false;
+
+
+                        }
                     }
                 }
 

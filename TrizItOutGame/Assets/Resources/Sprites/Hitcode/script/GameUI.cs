@@ -111,8 +111,12 @@ namespace Hitcode_RoomEscape
                     GameManager.getInstance().playSfx("flip");
                     break;
                 case "btnExitPreviousScene":
+                    Debug.Log("btnExitPreviousScene clicked");
+                    GameObject.Find("btnExitPreviousScene").GetComponent<Image>().enabled = false;
+
                     if (GameData.Instance.cameraList != null)
                     {
+                        Debug.Log("btnExitPreviousScene clicked");
                         if (GameData.Instance.locked) return;
                         print(GameData.Instance.cameraList.Count);
                         //if not at start scene
@@ -139,18 +143,50 @@ namespace Hitcode_RoomEscape
                                    // GameData.Instance.cameraList.RemoveAt(GameData.Instance.cameraList.Count - 2);
 
                                 }
-                                else if (tPrevCam.name == "appendCamera" || tPrevCam.name == "miniGame" || tPrevCam.name == "closeToTheBooks")
-                                {
-                                    Debug.Log("get in to the econdition");
-                                    GameData.Instance.cameraList.RemoveAt(GameData.Instance.cameraList.Count - 2);
-
-                                }
                                 else
                                 {
                                     GameData.Instance.cameraList[0].enabled = true;
                                 }
+                                Debug.Log("last camera : " + tPrevCam.name + "carr cemara   "+ tCurrentCam.name);
 
-                                Debug.Log("lastInTheList:" + GameData.Instance.cameraList[GameData.Instance.cameraList.Count - 2].name);
+                                if (tPrevCam.name == "appendCamera" || tPrevCam.name == "miniGame" || tPrevCam.name == "closeToTheBooks" || (tPrevCam.name == "newsPaperCamera" && tCurrentCam.name != "zoomQuiz"))
+                                {
+                                    Debug.Log("remove last camera : " + tPrevCam.name + GameData.Instance.cameraList[GameData.Instance.cameraList.Count - 1].name);
+
+                                    GameData.Instance.cameraList.RemoveAt(GameData.Instance.cameraList.Count - 2);
+
+                                }
+                                if (tCurrentCam.name == "zoomQuiz")
+                                {
+                                    Debug.Log(GameData.Instance.cameraList.Count - 1 +":"+ GameData.Instance.cameraList[GameData.Instance.cameraList.Count - 1].name+ "2" + GameData.Instance.cameraList[GameData.Instance.cameraList.Count - 2].name);
+
+                                    GameData.Instance.cameraList.RemoveAt(GameData.Instance.cameraList.Count - 1);
+                                    Debug.Log(GameData.Instance.cameraList[GameData.Instance.cameraList.Count - 1].name);
+                                    tPrevCam = GameData.Instance.cameraList[GameData.Instance.cameraList.Count - 1];
+
+                                }   
+                                Debug.Log(tPrevCam.name);
+                                if (tPrevCam.name == "Main Camera")
+                                {
+                                    Debug.Log("Main Camera enalble ");
+
+                                    GameObject stoneObject = GameObject.Find("stone");
+
+                                    if (stoneObject != null)
+                                    {
+                                        stoneObject.GetComponent<PolygonCollider2D>().enabled = true;
+                                    }
+                                    GameObject.Find("breakMeBox").GetComponent<BoxCollider2D>().enabled = true;
+                                    GameObject.Find("paswwordGame").GetComponent<BoxCollider>().enabled = true;
+                                    GameObject.Find("Key").GetComponent<PolygonCollider2D>().enabled = true;
+                                    GameObject.Find("Door").GetComponent<BoxCollider2D>().enabled = true;
+                                    GameObject.Find("newspaper").GetComponent<PolygonCollider2D>().enabled = true;
+                                    GameObject.Find("books").GetComponent<PolygonCollider2D>().enabled = true;
+                                    GameObject.Find("zoomToPaint").GetComponent<BoxCollider2D>().enabled = true;
+
+
+                                }
+                                //Debug.Log("lastInTheList:" + GameData.Instance.cameraList[GameData.Instance.cameraList.Count - 2].name);
 
                             }
 
@@ -185,6 +221,39 @@ namespace Hitcode_RoomEscape
                         else//got more than more cam in list,can undo
                         {
                             GameObject.Find("btnExitPreviousScene").GetComponent<Image>().enabled = false;
+                        }
+                    }
+                   
+                    Camera tPrevCam1 = GameData.Instance.cameraList[GameData.Instance.cameraList.Count - 2];
+                    Camera tCurrentCam1 = GameData.Instance.cameraList[GameData.Instance.cameraList.Count - 1];
+                    if (tCurrentCam1 != null && tPrevCam1 != null)
+                    {
+
+                        Debug.Log("tPrevCam:" + tPrevCam1.name);
+
+                        if (tPrevCam1.name == "Main Camera")
+                        {
+                            Debug.Log("Main Camera enalble ");
+                            GameObject stoneObject = GameObject.Find("stone");
+
+                            if(stoneObject!= null)
+                            {
+                                stoneObject.GetComponent<PolygonCollider2D>().enabled = true;
+                            }
+                            GameObject.Find("breakMeBox").GetComponent<BoxCollider2D>().enabled = true;
+                            GameObject.Find("paswwordGame").GetComponent<BoxCollider>().enabled = true;
+                            GameObject.Find("Key").GetComponent<PolygonCollider2D>().enabled = true;
+                            GameObject.Find("Door").GetComponent<BoxCollider2D>().enabled = true;
+                            GameObject.Find("newspaper").GetComponent<PolygonCollider2D>().enabled = true;
+                            GameObject.Find("books").GetComponent<PolygonCollider2D>().enabled = true;
+                            GameObject.Find("zoomToPaint").GetComponent<BoxCollider2D>().enabled = true;
+
+                        }
+                        if (tCurrentCam1.name == "appendCamera" || tCurrentCam1.name == "miniGame" || tCurrentCam1.name == "closeToTheBooks" || tCurrentCam1.name == "newsPaperCamera")
+                        {
+                            Debug.Log("get in to the econdition");
+                            GameData.Instance.cameraList.RemoveAt(GameData.Instance.cameraList.Count - 1);
+
                         }
                     }
                     GameObject.Find("SubSceneMask").GetComponent<Image>().enabled = false;
