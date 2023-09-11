@@ -22,6 +22,7 @@ public class ElectricSoundManager : MonoBehaviour
 
     private void manageElectricSound()
     {
+
         if (LightningManager.s_NeedToPlayElectricSound)
         {
             m_Timer = m_Timer + Time.deltaTime;
