@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEngine;
 
 public class PickUpItem : MonoBehaviour, IInteractable, IRespondsCursor
@@ -23,6 +24,8 @@ public class PickUpItem : MonoBehaviour, IInteractable, IRespondsCursor
 
     public void Interact(DisplayManagerLevel1 currDisplay)
     {
+        UnityEngine.Debug.Log($"this is the interact of {m_InventoryManager}");
+
         itemPickUp();
     }
 
@@ -35,6 +38,7 @@ public class PickUpItem : MonoBehaviour, IInteractable, IRespondsCursor
 
     public void OnMouseEnter()
     {
+        UnityEngine.Debug.Log($"this is the mouse enter of {m_InventoryManager}");
         GameObject.Find("Cursor_Manager").GetComponent<CursorManager>().ChangeCursorToHighlight();
     }
 
@@ -45,6 +49,8 @@ public class PickUpItem : MonoBehaviour, IInteractable, IRespondsCursor
 
     public void OnMouseDown()
     {
+        UnityEngine.Debug.Log($"mouse down {m_InventoryManager}");
+
         GameObject.Find("Cursor_Manager").GetComponent<CursorManager>().ChangeCursorToNormal();
     }
 }

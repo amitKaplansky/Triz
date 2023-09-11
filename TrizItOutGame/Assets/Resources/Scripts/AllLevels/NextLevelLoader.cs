@@ -38,7 +38,8 @@ public class NextLevelLoader : MonoBehaviour
     {
         m_LvlsDescriptions.Add(string.Empty);
         m_LvlsDescriptions.Add("The computer does turn on but it seems as if some of its components were damaged during the power outage. It will probably be easier to fix them from the inside, the question is will you be able to get back out?");
-        m_LvlsDescriptions.Add(string.Empty);
+        m_LvlsDescriptions.Add("A raging fire fills the room. Your mission: extinguish the flames, your only path to freedom.");
+
     }
 
     public void LoadNextLevel()
