@@ -58,7 +58,8 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        m_AudioSource = GetComponent<AudioSource>();  
+        m_AudioSource = GetComponent<AudioSource>();
+
 
         s_ButtonSound = Resources.Load<AudioClip>(sr_SoundPath + k_ButtonSoundName);
         s_WorngPasswordSound = Resources.Load<AudioClip>(sr_SoundPath + k_WorngPasswordSoundName);
@@ -91,50 +92,60 @@ public class SoundManager : MonoBehaviour
     {
         if (!s_IsMuted)
         {
+
             switch (i_Clip)
             {
                 case k_ButtonSoundName:
                     {
+
                         m_AudioSource.PlayOneShot(s_ButtonSound);
                         break;
                     }
                 case k_WorngPasswordSoundName:
                     {
+
                         m_AudioSource.PlayOneShot(s_WorngPasswordSound);
                         break;
                     }
                 case k_CorrectPasswordSoundName:
                     {
+
                         m_AudioSource.PlayOneShot(s_CorrectPasswordSound);
                         break;
                     }
                 case k_SwitchSoundName:
                     {
+
                         m_AudioSource.PlayOneShot(s_SwitchSound);
                         break;
                     }
                 case k_SpraySoundName:
                     {
+
                         m_AudioSource.PlayOneShot(s_SpraySound);
                         break;
                     }
                 case k_DoorOpenSoundName:
                     {
+
                         m_AudioSource.PlayOneShot(s_DoorOpenSound);
                         break;
                     }
                 case k_TakeItemSoundName:
                     {
+
                         m_AudioSource.PlayOneShot(s_TakeItemSound);
                         break;
                     }
                 case k_DrawerSoundName:
                     {
+
                         m_AudioSource.PlayOneShot(s_DrawerSound);
                         break;
                     }
                 case k_KattleBoilSoundName:
                     {
+
                         m_AudioSource.PlayOneShot(s_KattleBoilSound);
                         break;
                     }
@@ -219,11 +230,12 @@ public class SoundManager : MonoBehaviour
 
     public void OnToggleChanged()
     {
-        m_AudioSource.mute = !m_AudioSource.mute;
+        m_AudioSource.mute =! m_AudioSource.mute;
     }
 
     public static AudioClip FindAudioClip(string i_Name)
     {
+
         return Resources.Load<AudioClip>(sr_SoundPath + i_Name);
     }
 }

@@ -30,9 +30,10 @@ public class BackgroundMusicManager : MonoBehaviour
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         checkIfNeedToPlayQuizMusic(currentSceneIndex);
-       
         if (currentSceneIndex != m_PrevSceneIndex)
         {
+            UnityEngine.Debug.Log($"Get into is statmement {currentSceneIndex}");
+
             switch (currentSceneIndex)
             {
                 case 0: // MainMenu
@@ -48,6 +49,8 @@ public class BackgroundMusicManager : MonoBehaviour
                     }
                 case 2: // Level 1
                     {
+                        UnityEngine.Debug.Log($"Im get to the secound music {currentSceneIndex}");
+
                         m_AudioSource.clip = SoundManager.FindAudioClip("backgroundMusicLevel1");
                         m_AudioSource.volume = 0.6f;
                         m_AudioSource.Play();
@@ -69,9 +72,6 @@ public class BackgroundMusicManager : MonoBehaviour
                     }
                 case 5://level 4
                     {
-                        m_AudioSource.clip = SoundManager.FindAudioClip("level4BackgroundMusic");
-                        m_AudioSource.volume = 0.6f;
-                        m_AudioSource.Play();
                         break;
                     }
             }
