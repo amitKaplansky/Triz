@@ -133,14 +133,11 @@ namespace Hitcode_RoomEscape
                                Debug.Log("tPrevCam:" + tPrevCam.name);
                                 if (tPrevCam.name == "appendCamera" && tCurrentCam.name == "zoomQuiz")
                                 {
-                                    Debug.Log("get in to the secound econdition");
 
                                     GameObject.Find("btnExitSubScene").GetComponent<Image>().enabled = true;
                                     GameObject submask = GameObject.Find("SubSceneMask");
                                     submask.GetComponent<Image>().enabled = true;
                                     tPrevCam.enabled = true;
-
-                                   // GameData.Instance.cameraList.RemoveAt(GameData.Instance.cameraList.Count - 2);
 
                                 }
                                 else
@@ -151,7 +148,7 @@ namespace Hitcode_RoomEscape
 
                                 if (tPrevCam.name == "appendCamera" || tPrevCam.name == "miniGame" || tPrevCam.name == "closeToTheBooks" || (tPrevCam.name == "newsPaperCamera" && tCurrentCam.name != "zoomQuiz"))
                                 {
-                                    Debug.Log("remove last camera : " + tPrevCam.name + GameData.Instance.cameraList[GameData.Instance.cameraList.Count - 1].name);
+                                    Debug.Log("!remove last camera : " + tPrevCam.name + GameData.Instance.cameraList[GameData.Instance.cameraList.Count - 1].name);
 
                                     GameData.Instance.cameraList.RemoveAt(GameData.Instance.cameraList.Count - 2);
 
@@ -168,22 +165,7 @@ namespace Hitcode_RoomEscape
                                 Debug.Log(tPrevCam.name);
                                 if (tPrevCam.name == "Main Camera")
                                 {
-                                    Debug.Log("Main Camera enalble ");
-
-                                    GameObject stoneObject = GameObject.Find("stone");
-
-                                    if (stoneObject != null)
-                                    {
-                                        stoneObject.GetComponent<PolygonCollider2D>().enabled = true;
-                                    }
-                                    GameObject.Find("breakMeBox").GetComponent<BoxCollider2D>().enabled = true;
-                                    GameObject.Find("paswwordGame").GetComponent<BoxCollider>().enabled = true;
-                                    GameObject.Find("Key").GetComponent<PolygonCollider2D>().enabled = true;
-                                    GameObject.Find("Door").GetComponent<BoxCollider2D>().enabled = true;
-                                    GameObject.Find("newspaper").GetComponent<PolygonCollider2D>().enabled = true;
-                                    GameObject.Find("books").GetComponent<PolygonCollider2D>().enabled = true;
-                                    GameObject.Find("zoomToPaint").GetComponent<BoxCollider2D>().enabled = true;
-
+                                    enambelComponnet();
 
                                 }
                                 //Debug.Log("lastInTheList:" + GameData.Instance.cameraList[GameData.Instance.cameraList.Count - 2].name);
@@ -223,30 +205,19 @@ namespace Hitcode_RoomEscape
                             GameObject.Find("btnExitPreviousScene").GetComponent<Image>().enabled = false;
                         }
                     }
-                   
+                    Debug.Log($"Camera list{GameData.Instance.cameraList}");
                     Camera tPrevCam1 = GameData.Instance.cameraList[GameData.Instance.cameraList.Count - 2];
                     Camera tCurrentCam1 = GameData.Instance.cameraList[GameData.Instance.cameraList.Count - 1];
                     if (tCurrentCam1 != null && tPrevCam1 != null)
                     {
 
                         Debug.Log("tPrevCam:" + tPrevCam1.name);
+                        Debug.Log("tCurrentCam1:" + tCurrentCam1.name); 
+
 
                         if (tPrevCam1.name == "Main Camera")
                         {
-                            Debug.Log("Main Camera enalble ");
-                            GameObject stoneObject = GameObject.Find("stone");
-
-                            if(stoneObject!= null)
-                            {
-                                stoneObject.GetComponent<PolygonCollider2D>().enabled = true;
-                            }
-                            GameObject.Find("breakMeBox").GetComponent<BoxCollider2D>().enabled = true;
-                            GameObject.Find("paswwordGame").GetComponent<BoxCollider>().enabled = true;
-                            GameObject.Find("Key").GetComponent<PolygonCollider2D>().enabled = true;
-                            GameObject.Find("Door").GetComponent<BoxCollider2D>().enabled = true;
-                            GameObject.Find("newspaper").GetComponent<PolygonCollider2D>().enabled = true;
-                            GameObject.Find("books").GetComponent<PolygonCollider2D>().enabled = true;
-                            GameObject.Find("zoomToPaint").GetComponent<BoxCollider2D>().enabled = true;
+                            enambelComponnet();
 
                         }
                         if (tCurrentCam1.name == "appendCamera" || tCurrentCam1.name == "miniGame" || tCurrentCam1.name == "closeToTheBooks" || tCurrentCam1.name == "newsPaperCamera")
@@ -289,5 +260,42 @@ namespace Hitcode_RoomEscape
             }
         }
 
+        private void enambelComponnet()
+        {
+            GameObject stoneObject = GameObject.Find("stone");
+
+            if (stoneObject != null)
+            {
+                stoneObject.GetComponent<PolygonCollider2D>().enabled = true;
+            }
+            if (GameObject.Find("passwordGame") != null)
+            {
+                GameObject.Find("passwordGame").GetComponent<BoxCollider>().enabled = true;
+            }
+            if (GameObject.Find("Key") != null)
+            {
+                GameObject.Find("Key").GetComponent<PolygonCollider2D>().enabled = true;
+            }
+            if (GameObject.Find("breakMeBox") != null)
+            {
+                GameObject.Find("breakMeBox").GetComponent<BoxCollider2D>().enabled = true;
+            }
+            if (GameObject.Find("Door") != null)
+            {
+                GameObject.Find("Door").GetComponent<BoxCollider2D>().enabled = true;
+            }
+            if (GameObject.Find("newspaper") != null)
+            {
+                GameObject.Find("newspaper").GetComponent<PolygonCollider2D>().enabled = true;
+            }
+            if (GameObject.Find("books") != null)
+            {
+                GameObject.Find("books").GetComponent<PolygonCollider2D>().enabled = true;
+            }
+            if (GameObject.Find("zoomToPaint") != null)
+            {
+                GameObject.Find("zoomToPaint").GetComponent<BoxCollider2D>().enabled = true;
+            }
+        }
     }
 }

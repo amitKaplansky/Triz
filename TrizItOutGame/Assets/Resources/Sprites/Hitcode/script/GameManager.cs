@@ -133,21 +133,23 @@ namespace Hitcode_RoomEscape
         Dictionary<string, int> sfxdic = new Dictionary<string, int>();
 
         AudioSource cWalk = new AudioSource(); //sometime for continous sound like walk steps.
-                                               /// <summary>
-                                               /// Plaies the sfx.
-                                               /// </summary>
-                                               /// <returns>The sfx.</returns>
-                                               /// <param name="str">String.</param>
+        /// <summary>
+        /// Plaies the sfx.
+        /// </summary>
+        /// <returns>The sfx.</returns>
+        /// <param name="str">String.</param>
         public AudioSource playSfx(string str, string idNumber = "", bool isloop = false)
         {
             AudioSource sfxSound = null;
 
             if (!music)
                 return null;
+           
 
             AudioClip clip = (AudioClip)Resources.Load("sound\\" + str, typeof(AudioClip));
             if (GameData.getInstance().isSfxOn == 0)
             {
+                Debug.Log($"How is audio clip {music.GetComponent<musicScript>().PlayAudioClip(clip)}");
                 sfxSound = music.GetComponent<musicScript>().PlayAudioClip(clip);
 
                 sfxSound.loop = isloop;
