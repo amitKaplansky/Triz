@@ -12851,6 +12851,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4190130035386290666, guid: f65de8361ae559f44a2b228121daa4ad, type: 3}
+      propertyPath: m_Text
+      value: Hi you go to enter to fire room
+      objectReference: {fileID: 0}
     - target: {fileID: 7311128248164540219, guid: f65de8361ae559f44a2b228121daa4ad, type: 3}
       propertyPath: m_TextWriter
       value: 
