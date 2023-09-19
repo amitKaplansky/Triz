@@ -191,7 +191,7 @@ namespace Hitcode_RoomEscape
 
                     gameObject.SetActive(false);
                     GameData.Instance.rm.delayUnlock();
-                    GameManager.getInstance().playSfx("flip");
+                    //GameManager.getInstance().playSfx("flip");
                     break;
                 case "btnUse":
                     if (active1 != null) {
@@ -206,7 +206,7 @@ namespace Hitcode_RoomEscape
                     gameObject.SetActive(false);
                     transform.parent.GetComponent<GameUI>().initView();
                     GameData.Instance.rm.delayUnlock();
-                    GameManager.getInstance().playSfx("flip");
+                   // GameManager.getInstance().playSfx("flip");
                     break;
                 case "btnCombine":
                     bool combinable = false;
@@ -240,7 +240,7 @@ namespace Hitcode_RoomEscape
                         unCheckPage();
                     }
 
-                    GameManager.getInstance().playSfx("flip");
+                    //GameManager.getInstance().playSfx("flip");
                     break;
                 case "btnRight":
                     if(cpage < pages)
@@ -249,7 +249,7 @@ namespace Hitcode_RoomEscape
                         clearPage(false);
                         resetPage();
                     }
-                    GameManager.getInstance().playSfx("flip");
+                    //GameManager.getInstance().playSfx("flip");
                     break;
                 case "btnLeft":
                     if (cpage > 0)
@@ -258,7 +258,7 @@ namespace Hitcode_RoomEscape
                         clearPage(false);
                         resetPage();
                     }
-                    GameManager.getInstance().playSfx("flip");
+                   // GameManager.getInstance().playSfx("flip");
                     break;
             }
             showItemDesc();

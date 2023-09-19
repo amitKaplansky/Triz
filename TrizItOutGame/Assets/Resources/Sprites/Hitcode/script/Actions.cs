@@ -148,7 +148,7 @@ namespace Hitcode_RoomEscape
             //Switch Camera
             if (taction.switchCameras != null)
             {
-                Debug.Log("switch camares null");
+                Debug.Log("switch camares !!!!" + taction.switchCameras.swtichCamera.Count);
 
                 for (int i = 0; i < taction.switchCameras.swtichCamera.Count; i++)
                 {
@@ -195,6 +195,7 @@ namespace Hitcode_RoomEscape
 
                                 if (isRecord)
                                 {
+                                    Debug.Log("Is record");
                                     GameData.Instance.cameraList.Add(tnewCam);
 
                                     //enable previous button
@@ -210,6 +211,7 @@ namespace Hitcode_RoomEscape
                                 }
                                 else
                                 {
+                                    Debug.Log("ImWasHere");
                                     //disable previous button,clear cam list
                                     if (GameData.Instance.cameraList.Count > 1)
                                     {
@@ -232,10 +234,12 @@ namespace Hitcode_RoomEscape
                         }
                         else//append mode is quite different
                         {
-                            Debug.Log("append");
+                            Debug.Log("append" );
 
 
                             Camera tnewCam = targetCam.GetComponent<Camera>();
+                            Debug.Log(tnewCam.name);
+
                             if (tnewCam != null)
                             {
                                 tnewCam.enabled = true;
@@ -249,30 +253,14 @@ namespace Hitcode_RoomEscape
 
                                 GameData.Instance.areaGame = true;
 
-                                GameManager.getInstance().playSfx("flip");
+                               // GameManager.getInstance().playSfx("flip");
                                 GameData.Instance.cameraList.Add(tnewCam);
                             }
                         }
                         
                         if (targetCam.name != "Main Camera")
                         {
-                            Debug.Log("Main Camera enalble ");
-
-                            GameObject stoneObject = GameObject.Find("stone");
-
-                            if (stoneObject != null)
-                            {
-                                stoneObject.GetComponent<PolygonCollider2D>().enabled = false;
-                            }
-                            GameObject.Find("breakMeBox").GetComponent<BoxCollider2D>().enabled = false;
-                            GameObject.Find("paswwordGame").GetComponent<BoxCollider>().enabled = false;
-                            GameObject.Find("Key").GetComponent<PolygonCollider2D>().enabled = false;
-                            GameObject.Find("Door").GetComponent<BoxCollider2D>().enabled = false;
-                            GameObject.Find("newspaper").GetComponent<PolygonCollider2D>().enabled = false;
-                            GameObject.Find("books").GetComponent<PolygonCollider2D>().enabled = false;
-                            GameObject.Find("zoomToPaint").GetComponent<BoxCollider2D>().enabled = false;
-
-
+                            disableComponnent();
                         }
                     }
                 }
@@ -405,7 +393,7 @@ namespace Hitcode_RoomEscape
                             else
                             {
 
-                                GameManager.getInstance().playSfx(tsoundName, "", isLoop);
+                               // GameManager.getInstance().playSfx(tsoundName, "", isLoop);
 
                             }
                         }
@@ -480,8 +468,46 @@ namespace Hitcode_RoomEscape
             }
         }
 
+        private void disableComponnent()
+        {
 
+            GameObject stoneObject = GameObject.Find("stone");
+
+            if (stoneObject != null)
+            {
+                stoneObject.GetComponent<PolygonCollider2D>().enabled = false;
+            }
+            if (GameObject.Find("passwordGame") != null)
+            {
+                GameObject.Find("passwordGame").GetComponent<BoxCollider>().enabled = false;
+            }
+            if (GameObject.Find("Key") != null)
+            {
+                GameObject.Find("Key").GetComponent<PolygonCollider2D>().enabled = false;
+            }
+            if (GameObject.Find("breakMeBox") != null)
+            {
+                GameObject.Find("breakMeBox").GetComponent<BoxCollider2D>().enabled = false;
+            }
+            if (GameObject.Find("Door") != null)
+            {
+                GameObject.Find("Door").GetComponent<BoxCollider2D>().enabled = false;
+            }
+            if (GameObject.Find("newspaper") != null)
+            {
+                GameObject.Find("newspaper").GetComponent<PolygonCollider2D>().enabled = false;
+            }
+            if (GameObject.Find("books") != null)
+            {
+                GameObject.Find("books").GetComponent<PolygonCollider2D>().enabled = false;
+            }
+            if (GameObject.Find("zoomToPaint") != null)
+            {
+                GameObject.Find("zoomToPaint").GetComponent<BoxCollider2D>().enabled = false;
+            }
         }
+
+    }
 
 
 
